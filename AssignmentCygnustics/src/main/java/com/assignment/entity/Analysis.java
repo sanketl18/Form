@@ -1,0 +1,114 @@
+package com.assignment.entity;
+
+import java.sql.Date;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name="analysis")
+public class Analysis {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column
+	private Integer id;
+	
+	@Column
+	private String category;
+	
+	@Column
+	private String performer;
+	
+	@Column
+	private String details;
+	
+	@Column
+	private String methodology;
+	
+	@Column
+	private String assigned;
+	
+	@Column
+	private String department;
+	
+	@Column
+	private Date dueDate;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getCategory() {
+		return category;
+	}
+
+	public void setCategory(String category) {
+		this.category = category;
+	}
+
+	public String getPerformer() {
+		return performer;
+	}
+
+	public void setPerformer(String performer) {
+		this.performer = performer;
+	}
+
+	public String getDetails() {
+		return details;
+	}
+
+	public void setDetails(String details) {
+		this.details = details;
+	}
+
+	public String getMethodology() {
+		return methodology;
+	}
+
+	public void setMethodology(String methodology) {
+		this.methodology = methodology;
+	}
+
+	public String getAssigned() {
+		return assigned;
+	}
+
+	public void setAssigned(String assigned) {
+		this.assigned = assigned;
+	}
+
+	public String getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(String department) {
+		this.department = department;
+	}
+
+	public Date getDueDate() {
+		return dueDate;
+	}
+
+	public void setDueDate(Date dueDate) {
+		this.dueDate = dueDate;
+	}
+
+	@Override
+	public String toString() {
+		return "Analysis [id=" + id + ", category=" + category + ", performer=" + performer + ", details=" + details
+				+ ", methodology=" + methodology + ", assigned=" + assigned + ", department=" + department
+				+ ", dueDate=" + dueDate + "]";
+	}
+	
+	
+}
